@@ -8,9 +8,10 @@ class MobileNavbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
       child: Column(
         children: [
+          const SizedBox(height: 50,),
           const Text(
             "GopalKrishna",
             style: TextStyle(
@@ -19,52 +20,55 @@ class MobileNavbar extends StatelessWidget {
               color: Colors.white,
             ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const InkWell(
-                child: Text(
-                  "Home",
-                  style: TextStyle(
-                    color: Colors.white,
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const InkWell(
+                  child: Text(
+                    "Home",
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
                   ),
                 ),
-              ),
-              const SizedBox(width: 30),
-              const InkWell(
-                child: Text(
-                  "Contact",
-                  style: TextStyle(
-                    color: Colors.white,
+                const SizedBox(width: 30),
+                const InkWell(
+                  child: Text(
+                    "Contact",
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
                   ),
                 ),
-              ),
-              const SizedBox(width: 30),
-              const InkWell(
-                child: Text(
-                  "About Us",
-                  style: TextStyle(
-                    color: Colors.white,
+                const SizedBox(width: 30),
+                const InkWell(
+                  child: Text(
+                    "About Us",
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
                   ),
                 ),
-              ),
-              const SizedBox(width: 30),
-              MaterialButton(
-                color: Colors.red,
-                shape: const RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(20),
+                const SizedBox(width: 10),
+                MaterialButton(
+                  color: Colors.red,
+                  shape: const RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(20),
+                    ),
                   ),
-                ),
-                onPressed: () {},
-                child: const Text(
-                  "Join Now",
-                  style: TextStyle(
-                    color: Colors.white,
+                  onPressed: () {},
+                  child: const Text(
+                    "Join Now",
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
                   ),
-                ),
-              )
-            ],
+                )
+              ],
+            ),
           )
         ],
       ),
