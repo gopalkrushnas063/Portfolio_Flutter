@@ -8,11 +8,22 @@ class MobilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
         const SizedBox(
-          height: 40,
+          height: 20,
+        ),
+        ClipRRect(
+          borderRadius: BorderRadius.circular(12),
+          child: Image.asset(
+            "assets/images/brick.jpg",
+            width: 320,
+          ),
+        ),
+        const SizedBox(
+          height: 20,
         ),
         const Text(
           "Flutter Developer",

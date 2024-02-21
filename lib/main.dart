@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/MainPage/main_page.dart';
-import 'package:portfolio/NavBar/navbar.dart';
+import 'package:get/get.dart';
+import 'package:portfolio/Pages/MainPage/main_page.dart';
+import 'package:portfolio/Pages/NavBar/navbar.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -11,7 +13,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),

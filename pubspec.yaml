@@ -38,6 +38,8 @@ dependencies:
   lottie: ^3.0.0
   animated_text_kit: ^4.2.2
   font_awesome_flutter: ^10.6.0
+  get: ^4.6.6
+  quickalert: ^1.0.2
 
 dev_dependencies:
   flutter_test:
