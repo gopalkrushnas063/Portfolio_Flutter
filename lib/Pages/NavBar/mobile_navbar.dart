@@ -3,7 +3,8 @@ import 'package:get/get.dart';
 import 'package:portfolio/widgets/getin_touch_input_field.dart';
 
 class MobileNavbar extends StatelessWidget {
-  const MobileNavbar({super.key});
+  final VoidCallback? onAboutUsClicked;
+  const MobileNavbar({Key? key, this.onAboutUsClicked}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -45,8 +46,11 @@ class MobileNavbar extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: 30),
-                const InkWell(
-                  child: Text(
+                InkWell(
+                  onTap: () {
+                    onAboutUsClicked?.call();
+                  },
+                  child: const Text(
                     "About Us",
                     style: TextStyle(
                       color: Colors.white,
@@ -72,10 +76,7 @@ class MobileNavbar extends StatelessWidget {
                     },
                     child: const Text(
                       "Get In Touch",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 10.5
-                      ),
+                      style: TextStyle(color: Colors.white, fontSize: 10.5),
                     ),
                   ),
                 ),
@@ -87,3 +88,7 @@ class MobileNavbar extends StatelessWidget {
     );
   }
 }
+
+
+
+
